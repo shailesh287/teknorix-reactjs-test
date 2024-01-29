@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import JobList from "./Components/JobList.jsx";
+import JobList from "./Pages/JobList.jsx";
+import JobDetails from "./Pages/JobDetails.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -14,13 +15,15 @@ const appRouter = createBrowserRouter([
         index: true,
         element: <JobList />,
       },
+      {
+        path: "jobs/:id",
+        element: <JobDetails />,
+      },
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={appRouter}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={appRouter} />
   </React.StrictMode>
 );

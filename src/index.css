@@ -5,3 +5,15 @@
 * {
   box-sizing: border-box;
 }
+
+.description li {
+  list-style: disc;
+}
+
+.department-select-container {
+  position: relative;
+}
+
+
+
+

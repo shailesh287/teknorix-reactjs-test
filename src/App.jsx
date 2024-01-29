@@ -1,10 +1,10 @@
+import { Outlet } from "react-router";
 import "./App.css";
-import JobList from "./Components/JobList";
 
 function App() {
   return (
     <>
-      <JobList />
+      <Outlet />
     </>
   );
 }
